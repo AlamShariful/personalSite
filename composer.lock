@@ -2394,16 +2394,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "v0.10.7",
+            "version": "v0.10.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "1e2d93c94a52f41b7f3b8e135653479591d56683"
+                "reference": "4a18590c635f4629c9247061c32b187fb3ce8867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/1e2d93c94a52f41b7f3b8e135653479591d56683",
-                "reference": "1e2d93c94a52f41b7f3b8e135653479591d56683",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/4a18590c635f4629c9247061c32b187fb3ce8867",
+                "reference": "4a18590c635f4629c9247061c32b187fb3ce8867",
                 "shasum": ""
             },
             "require": {
@@ -2440,7 +2440,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2016-12-29T22:12:45+00:00"
+            "time": "2017-01-08T12:02:35+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
