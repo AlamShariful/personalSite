@@ -50,10 +50,7 @@
     @yield('what')
 <!-- main page content Ends -->
 
-  <!-- Blog page content -->
-    @yield('blog')
 
-   <!-- Blog page content Ends-->
 
     
 

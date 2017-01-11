@@ -17,12 +17,19 @@ Route::get('/', function () {
     //return view('mainLayout');
 });
 
+/*
 Route::get('blog', function () {
     
     return view('blogPage');
     
 });
 
+*/
+Route::get('blog','controller_Posts@index');
+
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
 });
+

@@ -18,6 +18,8 @@
 
     }
 
+
+
 </style>
 
 <head>
@@ -26,14 +28,14 @@
 </head>
 
 <body>
+    
+    <div class="container">
 
       <!-- Blog page content -->
-    @yield('blog')
-    @yield('who')
+    @yield('blogPost')
 
    <!-- Blog page content Ends-->
-
-    
+   </div>
 
 
     <footer>
