@@ -34,6 +34,7 @@
             @yield('name')
             @yield('options')
             
+            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -46,8 +47,10 @@
     <!--This is the main section for banner Image Ends-->
     
 <!-- main page content -->
-    @yield('who')
-    @yield('what')
+
+        @yield('who')
+        @yield('what')
+
 <!-- main page content Ends -->
 
 

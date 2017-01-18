@@ -9,7 +9,9 @@ class controller_Posts extends Controller
 {
     //
     public function index(){
-    	$post= Posts::all();
-    	return view('blogPage', array('post'=>$post));
+    	//$post= Posts::all();
+    	// get the most recent post first
+    	$post = Posts::orderBy('id', 'DESC')->get();
+    	return view('blog', array('post'=>$post));
     }
 }

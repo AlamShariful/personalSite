@@ -1,67 +1,113 @@
 @extends('topNavigation')
+@extends('mainLayout')
 <!DOCTYPE html>
 <html lang="en">
-
-<style>
-    .wrapper {
-        width: 100%;
-        background-color: #DFDFDF;
-    }
-
-    #mainImg {
-        padding-top: 90px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-
-    }
-
-
-
-</style>
-
 <head>
+    
+@include('head')
+<title>Blog</title>
 
-    @include('head')
+    
 </head>
 
-<body>
-    
+<body id="page-top" class="container-fluid"style="background-color:#EEEEEE">
+
+    <!--div class="nav bar navbar-default navbar-fixed-top">
+        @yi eld('name')
+        @yie ld('options')
+    </div-->
+<nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
 
-      <!-- Blog page content -->
-    @yield('blogPost')
 
-   <!-- Blog page content Ends-->
-   </div>
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+<div class="row">&nbsp;</div>
+<div class="row">&nbsp;</div>
+
+    <div class="container container-fluid">
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+            
+            <div class="jumbotron">
+                <h1>Change is the end result of all true learning.</h1>
+                <p class="pull-right">-Leo Buscaglia
+                </p>
+            </div>
+            @yield('blogPost')
+        </div><!--/.col-xs-12.col-sm-9-->
+
+         
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <a href="#" class="list-group-item active">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+    </div><!--/row-->
+
+    <hr>
+
+    
+
+</div><!--/.container-->
 
 
-    <footer>
-        @include('footer');
-    </footer>
 
-    <!-- jQuery -->
-    <script src="newVendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="offcanvas.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="newVendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function(){ /* to make sure the script runs after page load */
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        $('.more').each(function(event){ /* select all divs with the item class */
 
-    <!-- Theme JavaScript -->
-    <script src="js/script.min.js"></script>
+            var max_length = 15; /* set the max content length before a read more link will be added */
+
+            if($(this).html().length > max_length){ /* check for content length */
+
+                var short_content   = $(this).html().substr(0,max_length); /* split the content in two parts */
+                var long_content    = $(this).html().substr(max_length);
+
+                $(this).html(short_content+
+                        '<p><a class="btn btn-default read_more" data-toggle="toggle" href="#" role="button">Read More &raquo;</a></p>'+
+                        '<span class="more_text" style="display:none;">'+long_content+'</span>'); /* Alter the html to allow the read more functionality */
+
+                $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
+
+                    event.preventDefault(); /* prevent the a from changing the url */
+                    $(this).hide(); /* hide the read more button */
+                    $(this).parents('.more').find('.more_text').show(); /* show the .more_text span */
+
+                });
+
+            }
+
+        });
 
 
+    });
 
 
-
+</script>
 
 </body>
-
 </html>
-
-
-
