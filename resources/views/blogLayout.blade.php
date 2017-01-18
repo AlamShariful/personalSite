@@ -1,5 +1,3 @@
-@extends('topNavigation')
-@extends('mainLayout')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +8,10 @@
     
 </head>
 
-<body id="page-top" class="container-fluid"style="background-color:#EEEEEE">
-
-    <!--div class="nav bar navbar-default navbar-fixed-top">
-        @yi eld('name')
-        @yie ld('options')
-    </div-->
+<body class="container-fluid"style="background-color:#EEEEEE">
 <nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-
+    <div class="container" style="color: #9c1014">
+efjskrjg
 
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
@@ -62,6 +55,10 @@
     
 
 </div><!--/.container-->
+
+    <footer class="container-fluid">
+        @include('footer')
+    </footer>
 
 
 

@@ -59,7 +59,7 @@
 
 
     <footer>
-        @include('footer');
+        @include('footer')
     </footer>
 
     <!-- jQuery -->
