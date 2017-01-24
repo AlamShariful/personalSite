@@ -25,7 +25,12 @@ Route::get('blog', function () {
 });
 
 */
+//Blog Post controller
 Route::get('blog','controller_Posts@index');
+
+// Single Blog by id 
+Route::get('blog/{id}','controller_Posts@single_post');
+
 
 
 Route::group(['prefix' => 'admin'], function () {

@@ -14,4 +14,9 @@ class controller_Posts extends Controller
     	$post = Posts::orderBy('id', 'DESC')->get();
     	return view('blog', array('post'=>$post));
     }
+
+    public function single_post($id){
+
+    	return "hi";
+    }
 }

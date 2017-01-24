@@ -32,7 +32,6 @@ efjskrjg
             @yield('blogPost')
         </div><!--/.col-xs-12.col-sm-9-->
 
-         
 
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
@@ -56,55 +55,12 @@ efjskrjg
 
 </div><!--/.container-->
 
-    <footer class="container-fluid">
+    <footer>
         @include('footer')
     </footer>
 
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="offcanvas.js"></script>
-
-<script type="text/javascript">
-    $(function(){ /* to make sure the script runs after page load */
-
-        $('.more').each(function(event){ /* select all divs with the item class */
-
-            var max_length = 15; /* set the max content length before a read more link will be added */
-
-            if($(this).html().length > max_length){ /* check for content length */
-
-                var short_content   = $(this).html().substr(0,max_length); /* split the content in two parts */
-                var long_content    = $(this).html().substr(max_length);
-
-                $(this).html(short_content+
-                        '<p><a class="btn btn-default read_more" data-toggle="toggle" href="#" role="button">Read More &raquo;</a></p>'+
-                        '<span class="more_text" style="display:none;">'+long_content+'</span>'); /* Alter the html to allow the read more functionality */
-
-                $(this).find('a.read_more').click(function(event){ /* find the a.read_more element within the new html and bind the following code to it */
-
-                    event.preventDefault(); /* prevent the a from changing the url */
-                    $(this).hide(); /* hide the read more button */
-                    $(this).parents('.more').find('.more_text').show(); /* show the .more_text span */
-
-                });
-
-            }
-
-        });
-
-
-    });
-
-
-</script>
 
 </body>
 </html>
