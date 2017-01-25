@@ -17,6 +17,11 @@ class controller_Posts extends Controller
 
     public function single_post($id){
 
-    	return "hi";
+    	
+    	// get all content if a particular post
+    	$postBody= Posts::where('id',$id)->get();
+
+    	//Load View File with all the information
+    	return $postBody;
     }
 }
