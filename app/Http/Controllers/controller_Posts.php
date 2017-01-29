@@ -22,6 +22,6 @@ class controller_Posts extends Controller
     	$postBody= Posts::where('id',$id)->get();
 
     	//Load View File with all the information
-    	return $postBody;
+    	return view('singlePost',array('postBody'=> $postBody));
     }
 }

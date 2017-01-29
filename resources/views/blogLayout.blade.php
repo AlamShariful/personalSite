@@ -22,31 +22,18 @@ efjskrjg
     <div class="container container-fluid">
     <div class="row row-offcanvas row-offcanvas-right">
 
+        <!-- Main Layout Jumbotron -->
         <div class="col-xs-12 col-sm-9">
-            
-            <div class="jumbotron">
-                <h1>Change is the end result of all true learning.</h1>
-                <p class="pull-right">-Leo Buscaglia
-                </p>
-            </div>
+
+            @yield('blogpageJumbotron')
             @yield('blogPost')
-        </div><!--/.col-xs-12.col-sm-9-->
+            @yield('SingleblogPost')
+        </div>
+        <!--/.col-xs-12.col-sm-9-->
 
 
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-            </div>
-        </div><!--/.sidebar-offcanvas-->
+        @yield('sidebar')
+        <!--/.sidebar-offcanvas-->
     </div><!--/row-->
 
     <hr>

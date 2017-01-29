@@ -12,7 +12,7 @@ This page contains the all blog post listed from database
     	@if($posts["status"]=="PUBLISHED")
             <div class="row">
                 <div class="col-xs-6 col-lg-12">
-                    <h2 style="color: #2b542c"> <a id="postID" href="blog/{{$posts["id"]}}">{{$posts["title"]}}</a></h2>
+                    <h2 style="color: #2b542c"> <a id="postID" href="blog/{{$posts["id"]}}" target="_blank">{{$posts["title"]}}</a></h2>
                     <p>
                         <span class="glyphicon glyphicon-time"></span> 
                         Posted on {{$posts["updated_at"]}}
@@ -25,7 +25,7 @@ This page contains the all blog post listed from database
                     @endif
 
                     <p class="more">{{strip_tags($posts["body"])}}</p>
-                    <a href="blog/{{$posts["id"]}}"> <span class="btn btn-default more_text">Read More&raquo;</span></a>
+                    <a href="blog/{{$posts["id"]}}" target="_blank"> <span class="btn btn-default more_text">Read More&raquo;</span></a>
 
 
                 </div><!--/.col-xs-6.col-lg-4-->
