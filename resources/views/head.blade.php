@@ -4,7 +4,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shariful Alam</title>
+    <title>@yield('pagetitle')</title>
 
     <!--Icon for Browser and shortcut class is used to clear IE's favicon cache -->
     <link rel="shortcut icon" href="{{asset('img/icon.ico')}}">

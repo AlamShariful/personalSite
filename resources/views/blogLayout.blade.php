@@ -1,17 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-@include('head')
-<title>Blog</title>
 
-    
+@include('head')
+
+
 </head>
 
 <body class="container-fluid"style="background-color:#EEEEEE">
 <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container" style="color: #9c1014">
-efjskrjg
+
+        <div class="navbar-header">
+
+            <a class="navbar-brand page-scroll " href="/"><strong>Home</strong></a>
+            <a class="navbar-brand page-scroll " href="../blog"><strong>Blog</strong></a>
+        </div>
 
     </div><!-- /.container -->
 </nav><!-- /.navbar -->

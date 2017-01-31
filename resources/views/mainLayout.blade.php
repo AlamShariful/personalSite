@@ -20,6 +20,10 @@
 
 </style>
 
+@section('pagetitle')
+    Shariful Alam
+@endsection
+
 <head>
 
     @include('head')

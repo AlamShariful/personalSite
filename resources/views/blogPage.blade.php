@@ -2,6 +2,17 @@
 This page contains the all blog post listed from database
 
 --}}
+<style>
+    #postID{
+        color:#7c51d1;
+
+    }
+</style>
+
+@section('pagetitle')
+     Blog | Shariful Alam
+    @endsection
+
 
 
 @section('blogPost')
@@ -12,9 +23,9 @@ This page contains the all blog post listed from database
     	@if($posts["status"]=="PUBLISHED")
             <div class="row">
                 <div class="col-xs-6 col-lg-12">
-                    <h2 style="color: #2b542c"> <a id="postID" href="blog/{{$posts["id"]}}" target="_blank">{{$posts["title"]}}</a></h2>
+                    <h2> <a id="postID" href="blog/{{$posts["id"]}}" target="_blank">{{$posts["title"]}}</a></h2>
                     <p>
-                        <span class="glyphicon glyphicon-time"></span> 
+                        <span class="glyphicon glyphicon-time"style="color:#7c1a06"></span>
                         Posted on {{$posts["updated_at"]}}
                     </p>
 
@@ -56,8 +67,8 @@ This page contains the all blog post listed from database
 
             $('.more').each(function(event){ /* select all divs with the item class */
 
-                var max_length = 15; /* set the max content length before a read more link will be added */
-                var id= 2;
+                var max_length = 250; /* set the max content length before a read more link will be added */
+
 
                 if($(this).html().length > max_length){ /* check for content length */
 
